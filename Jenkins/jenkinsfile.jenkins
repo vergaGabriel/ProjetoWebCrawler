@@ -12,7 +12,7 @@ pipeline {
         stage("run") {
             steps {
                 echo 'Test run go file'
-                sh 'go run jenkins/main.go'
+                sh 'go run ProjetoWebCrawler/jenkins/main.go'
             }
         }
     }
