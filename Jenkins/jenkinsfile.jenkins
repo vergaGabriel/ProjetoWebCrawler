@@ -1,1 +1,19 @@
-echo "Tua prexereca é minha"
+pipeline {
+    agente any
+    tools {
+        go '1.21.3'
+    }
+    environment {
+        GO1213MODULE = 'on'
+        CGO_ENABLED = 0
+        GOPATH = "${JENKINS_HOME}/jobs/${JOB_NAME}/builds/${BUILD_ID}"
+    }
+    stages {
+        stage("run") {
+            steps {
+                echo 'Test run go file'
+                sh 'go run main.go'
+            }
+        }
+    }
+}
