@@ -1,6 +1,8 @@
 #!/bin/bash
+rm -rf ProjetoWebCrawler
+
 git clone https://github.com/vergaGabriel/ProjetoWebCrawler.git
 cd ProjetoWebCrawler
 
-sudo apt-get install go
+sudo -S apt-get install go
 go run main.go
