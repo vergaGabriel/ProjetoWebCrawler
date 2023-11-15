@@ -49,8 +49,6 @@ func main(){
  
         for i:=1; i<2; i++{
                 num := strconv.Itoa(i)
-                fmt.Println(num)
-                fmt.Println("https://www.amazon.com.br/s?k=whey&page="+num)
                 c.Visit("https://www.amazon.com.br/s?k=whey&page="+num)
         }
 
