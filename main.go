@@ -29,7 +29,6 @@ func main(){
  
         c.OnHTML("div.s-result-list.s-search-results.sg-row", func(h*colly.HTMLElement){
                 h.ForEach("div.a-section.a-spacing-base", func(_ int, h*colly.HTMLElement){
-                        time.Sleep(30 * time.Second) 
                         cont++
                         data := time.Now()
                         data_format := data.Format(time.RFC3339)
